@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Version from "./Components/Version/Version";
 import Modal from "./Components/Modal/Modal";

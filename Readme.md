@@ -8,6 +8,11 @@ React and JavaScrip experiments, in game form.
 - [ ] version context
 
 - [ ] Testing
+  - [x] Verify basic testing
+  - [ ] Verify test for each component
+
+- [ ] Clean up css
+- [ ] Clean up unused files
 
 - [x] modal component
 - [x] Add version file creation script.
