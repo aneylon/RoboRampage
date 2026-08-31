@@ -1,6 +1,6 @@
 {
   "name": "front",
-  "version": "0.1.0",
+  "version": "0.0.1b",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "create-version-file": "node ./tools/create-version-file.js"
   },
   "eslintConfig": {
     "extends": [
