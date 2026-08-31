@@ -2,7 +2,6 @@ import "./Modal.css";
 
 const Modal = ({ show }) => {
   const refresh = () => {
-    console.log("So fresh and so clean.");
     window.location.reload(true);
   };
 
@@ -11,10 +10,8 @@ const Modal = ({ show }) => {
       {show ? (
         <div className="modal">
           <div className="modal-content">
-            <h2>
-              Your app is out of date. Please refresh the page to get the most
-              recent version.
-            </h2>
+            <h2>Your app is out of date.</h2>
+            <h3>Please refresh the page to get the most recent version.</h3>
             <button onClick={refresh}>Refresh</button>
           </div>
         </div>

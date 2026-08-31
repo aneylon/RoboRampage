@@ -4,12 +4,12 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
-- [ ] modal component
 - [ ] useFetch hooks
 - [ ] version context
 
 - [ ] Testing
 
+- [x] modal component
 - [x] Add version file creation script.
 - [x] Initialize the front end with create react app.
 
