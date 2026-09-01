@@ -1,18 +1,21 @@
+import { useState } from "react";
 import "./Modal.css";
 
-const Modal = ({ show }) => {
-  const refresh = () => {
-    window.location.reload(true);
+const Modal = ({ show, title, content }) => {
+  const [showModal, setShowModal] = useState(show);
+
+  const close = () => {
+    setShowModal(false);
   };
 
   return (
     <>
-      {show ? (
+      {showModal ? (
         <div className="modal">
           <div className="modal-content">
-            <h2>Your app is out of date.</h2>
-            <h3>Please refresh the page to get the most recent version.</h3>
-            <button onClick={refresh}>Refresh</button>
+            <h2>{title}</h2>
+            <h3>{content}</h3>
+            <button onClick={close}>close</button>
           </div>
         </div>
       ) : (

@@ -1,17 +1,20 @@
 import "./App.css";
 import Version from "./Components/Version/Version";
-import Modal from "./Components/Modal/Modal";
 import Title from "./Components/Title/Title";
+import VersionContextProvider from "./Context/versionContext";
+import VersionModal from "./Components/Modal/VersionModal";
 
 function App() {
   return (
-    <div className="App">
-      <Title text={"Robo Rampage"} />
-      <Version />
-      <Modal show={true} />
-      {/* TODO : come up with something better for the line below... */}
-      <h6>some text</h6>
-    </div>
+    <VersionContextProvider>
+      <div className="App">
+        <Title text={"Robo Rampage"} />
+        <Version />
+        <VersionModal />
+        {/* TODO : come up with something better for the line below... */}
+        <h6>some text</h6>
+      </div>
+    </VersionContextProvider>
   );
 }
 

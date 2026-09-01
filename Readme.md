@@ -5,16 +5,18 @@ React and JavaScrip experiments, in game form.
 ## TODO :
 
 - [ ] useFetch hooks
-- [ ] version context
+- [x] version context
 
 - [ ] Testing
   - [x] Verify basic testing
   - [ ] Verify test for each component
+  - [ ] Update version modal and normal modal tests
 
 - [ ] Clean up css
 - [ ] Clean up unused files
 
 - [x] modal component
+- [x] split modal into general and version specific modals
 - [x] Add version file creation script.
 - [x] Initialize the front end with create react app.
 
