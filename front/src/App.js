@@ -3,12 +3,14 @@ import Version from "./Components/Version/Version";
 import Title from "./Components/Title/Title";
 import VersionContextProvider from "./Context/versionContext";
 import VersionModal from "./Components/Modal/VersionModal";
+import ToDo from "./Components/TodoList/ToDo";
 
 function App() {
   return (
     <VersionContextProvider>
       <div className="App">
         <Title text={"Robo Rampage"} />
+        <ToDo />
         <Version />
         <VersionModal />
         {/* TODO : come up with something better for the line below... */}

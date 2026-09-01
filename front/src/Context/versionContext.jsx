@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const VersionContext = createContext();
 
 const VersionContextProvider = (props) => {
-  const [versionOutOfDate, setVersionOutOfDate] = useState(true);
+  const [versionOutOfDate, setVersionOutOfDate] = useState(false);
 
   return (
     <VersionContext.Provider value={{ versionOutOfDate, setVersionOutOfDate }}>

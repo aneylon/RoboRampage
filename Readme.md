@@ -5,6 +5,10 @@ React and JavaScrip experiments, in game form.
 ## TODO :
 
 - [ ] useFetch hooks
+  - [ ] basic
+  - [ ] promise
+  - [ ] async await
+
 - [x] version context
 
 - [ ] Testing
@@ -26,3 +30,7 @@ To monitor and verify that the app is on the current version a new version file 
 
 - First update the version in the package.
 - Run the create-version-file script to create or update the file before deployment.
+
+## Testing Data
+
+[Json Placeholder](https://jsonplaceholder.typicode.com/)
