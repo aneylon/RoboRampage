@@ -5,12 +5,14 @@ import VersionContextProvider from "./Context/versionContext";
 import VersionModal from "./Components/Modal/VersionModal";
 import ToDo from "./Components/TodoList/ToDo";
 import TestButton from "./Components/Buttons/TestButton";
+import WeirdTestButton from "./Components/Buttons/WeirdTestButton";
 
 function App() {
   return (
     <VersionContextProvider>
       <div className="App">
         <Title text={"Robo Rampage"} />
+        <WeirdTestButton />
         <TestButton />
         <ToDo />
         <Version />

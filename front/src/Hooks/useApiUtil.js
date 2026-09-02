@@ -18,3 +18,5 @@ const useApiUtils = () => {
 
   return { get, post };
 };
+
+export default useApiUtils;
