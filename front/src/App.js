@@ -6,12 +6,19 @@ import VersionModal from "./Components/Modal/VersionModal";
 import ToDo from "./Components/TodoList/ToDo";
 import TestButton from "./Components/Buttons/TestButton";
 import WeirdTestButton from "./Components/Buttons/WeirdTestButton";
+import Button from "./Components/Buttons/Button";
 
 function App() {
   return (
     <VersionContextProvider>
       <div className="App">
         <Title text={"Robo Rampage"} />
+        <Button
+          text={"Start New Game"}
+          action={() => {
+            console.log("start a new game");
+          }}
+        />
         <WeirdTestButton />
         <TestButton />
         <ToDo />

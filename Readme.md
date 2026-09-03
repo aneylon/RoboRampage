@@ -4,9 +4,12 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
+- [ ] Skeleton UI for game
+  - [x] Reusable Button
+
 - [ ] useFetch hooks
-  - [ ] basic
-  - [ ] promise
+  - [x] basic
+  - [x] promise
   - [ ] async await
 
 - [x] version context
