@@ -7,11 +7,13 @@ import ToDo from "./Components/TodoList/ToDo";
 import TestButton from "./Components/Buttons/TestButton";
 import WeirdTestButton from "./Components/Buttons/WeirdTestButton";
 import Button from "./Components/Buttons/Button";
+import Menu from "./Components/Menu/Menu";
 
 function App() {
   return (
     <VersionContextProvider>
       <div className="App">
+        <Menu />
         <Title text={"Robo Rampage"} />
         <Button
           text={"Start New Game"}
