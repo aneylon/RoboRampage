@@ -8,11 +8,13 @@ import TestButton from "./Components/Buttons/TestButton";
 import WeirdTestButton from "./Components/Buttons/WeirdTestButton";
 import Button from "./Components/Buttons/Button";
 import Menu from "./Components/Menu/Menu";
+import MainMenu from "./Components/Menu/MainMenu";
 
 function App() {
   return (
     <VersionContextProvider>
       <div className="App">
+        <MainMenu />
         <Menu />
         <Title text={"Robo Rampage"} />
         <Button
