@@ -10,30 +10,36 @@ import Button from "./Components/Buttons/Button";
 import Menu from "./Components/Menu/Menu";
 import MainMenu from "./Components/Menu/MainMenu";
 import SettingsMenu from "./Components/Menu/SettingsMenu";
+import ThemeContextProvider, { ThemeContext } from "./Context/themeContext";
+import { useContext } from "react";
+import ThemeToggle from "./Components/Buttons/ThemeToggle";
 
 function App() {
   return (
-    <VersionContextProvider>
-      <div className="App">
-        <MainMenu />
-        <SettingsMenu />
-        <Menu />
-        <Title text={"Robo Rampage"} />
-        <Button
-          text={"Start New Game"}
-          action={() => {
-            console.log("start a new game");
-          }}
-        />
-        <WeirdTestButton />
-        <TestButton />
-        <ToDo />
-        <Version />
-        <VersionModal />
-        {/* TODO : come up with something better for the line below... */}
-        <h6>some text</h6>
-      </div>
-    </VersionContextProvider>
+    <ThemeContextProvider>
+      <VersionContextProvider>
+        <div className="App">
+          <ThemeToggle />
+          <MainMenu />
+          <SettingsMenu />
+          <Menu />
+          <Title text={"Robo Rampage"} />
+          <Button
+            text={"Start New Game"}
+            action={() => {
+              console.log("start a new game");
+            }}
+          />
+          <WeirdTestButton />
+          <TestButton />
+          <ToDo />
+          <Version />
+          <VersionModal />
+          {/* TODO : come up with something better for the line below... */}
+          <h6>some text</h6>
+        </div>
+      </VersionContextProvider>
+    </ThemeContextProvider>
   );
 }
 
