@@ -4,6 +4,22 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
+- [ ] Online
+  - [ ] Hook
+  - [ ] Component
+
+- [ ] Theme
+  - [ ] Context
+  - [ ] Toggle
+  - [ ] Styling
+
+- [ ] Auth
+  - [ ] Context
+  - [ ] Sign Up
+  - [ ] Sign In
+  - [ ] Sign Out
+  - [ ] Pass token in fetch
+
 - [ ] Skeleton UI for game
   - [x] Reusable Button
   - [ ] Menu Screens

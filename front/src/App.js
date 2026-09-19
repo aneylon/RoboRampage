@@ -13,6 +13,7 @@ import SettingsMenu from "./Components/Menu/SettingsMenu";
 import ThemeContextProvider, { ThemeContext } from "./Context/themeContext";
 import { useContext } from "react";
 import ThemeToggle from "./Components/Buttons/ThemeToggle";
+import ShowOnlineStatus from "./Components/Utilities/ShowOnlineStatus";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <VersionContextProvider>
         <div className="App">
           <ThemeToggle />
+          <ShowOnlineStatus />
           <MainMenu />
           <SettingsMenu />
           <Menu />
