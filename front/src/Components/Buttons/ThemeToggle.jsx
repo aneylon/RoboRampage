@@ -10,7 +10,15 @@ const ThemeToggle = () => {
         toggleTheme();
       }}
     >
-      {isDark ? <>(</> : <>*</>}
+      {isDark ? (
+        <>
+          <span class="material-symbols-outlined">dark_mode</span>
+        </>
+      ) : (
+        <>
+          <span class="material-symbols-outlined">light_mode</span>
+        </>
+      )}
     </button>
   );
 };

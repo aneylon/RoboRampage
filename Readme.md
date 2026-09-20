@@ -4,13 +4,13 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
-- [ ] Online
-  - [ ] Hook
-  - [ ] Component
+- [x] Online
+  - [x] Hook
+  - [x] Component
 
 - [ ] Theme
-  - [ ] Context
-  - [ ] Toggle
+  - [x] Context
+  - [x] Toggle
   - [ ] Styling
 
 - [ ] Auth
@@ -54,3 +54,7 @@ To monitor and verify that the app is on the current version a new version file 
 ## Testing Data
 
 [Json Placeholder](https://jsonplaceholder.typicode.com/)
+
+## Resources
+
+[Material Design Icons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:light_mode:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=light&icon.size=24&icon.color=%23e3e3e3)
