@@ -19,6 +19,7 @@ function App() {
     <ThemeContextProvider>
       <VersionContextProvider>
         <div className="App">
+          <h1>Testings?</h1>
           <ThemeToggle />
           <ShowOnlineStatus />
           <MainMenu />
