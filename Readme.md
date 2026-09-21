@@ -57,6 +57,10 @@ To monitor and verify that the app is on the current version a new version file 
 - First update the version in the package.
 - Run the create-version-file script to create or update the file before deployment.
 
+ENV variables
+We also use an environment variable to validate the version.
+This must also be updated with each deployment.
+
 ## Testing Data
 
 [Json Placeholder](https://jsonplaceholder.typicode.com/)
