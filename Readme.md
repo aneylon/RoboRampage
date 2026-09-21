@@ -7,8 +7,8 @@ React and JavaScrip experiments, in game form.
 ## TODO :
 
 - [x] Deploy
-  - [ ] Verify version context working
-  - [ ] Display deployment status
+  - [x] Verify version context working
+  - [x] Display deployment status
 
 - [x] Online
   - [x] Hook
