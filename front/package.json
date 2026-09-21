@@ -1,6 +1,6 @@
 {
   "name": "front",
-  "version": "0.0.1c",
+  "version": "0.0.1d",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
