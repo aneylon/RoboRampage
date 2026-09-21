@@ -2,9 +2,11 @@
 
 React and JavaScrip experiments, in game form.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b656f4c6-3f66-44a4-9cf2-363cd722b67c/deploy-status)](https://app.netlify.com/projects/robo-rampage/deploys)
+
 ## TODO :
 
-- [ ] Deploy
+- [x] Deploy
   - [ ] Verify version context working
   - [ ] Display deployment status
 
