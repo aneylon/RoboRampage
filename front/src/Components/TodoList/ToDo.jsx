@@ -6,7 +6,9 @@ const ToDo = () => {
 
   useEffect(() => {
     request("https://jsonplaceholder.typicode.com/todos");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <div>
       <h1>ToDo List</h1>

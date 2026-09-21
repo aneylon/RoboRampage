@@ -4,6 +4,10 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
+- [ ] Deploy
+  - [ ] Verify version context working
+  - [ ] Display deployment status
+
 - [x] Online
   - [x] Hook
   - [x] Component

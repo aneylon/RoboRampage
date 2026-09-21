@@ -10,8 +10,7 @@ import Button from "./Components/Buttons/Button";
 import Menu from "./Components/Menu/Menu";
 import MainMenu from "./Components/Menu/MainMenu";
 import SettingsMenu from "./Components/Menu/SettingsMenu";
-import ThemeContextProvider, { ThemeContext } from "./Context/themeContext";
-import { useContext } from "react";
+import ThemeContextProvider from "./Context/themeContext";
 import ThemeToggle from "./Components/Buttons/ThemeToggle";
 import ShowOnlineStatus from "./Components/Utilities/ShowOnlineStatus";
 

@@ -10,6 +10,9 @@ const TestButton = () => {
   return (
     <div>
       <button onClick={testIt}>Test Button</button>
+      {loading && <div>...loading...</div>}
+      {error && <div>{error.message}</div>}
+      {data && <div>{data.id}</div>}
     </div>
   );
 };
