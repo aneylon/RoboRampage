@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Example</title>
+  </head>
+  <body>
+    <div id="gameArea">
+      <canvas id="mycanvas" width="800" height="480"></canvas>
+    </div>
+    <script>
+      changeCanvasColor = function () {
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+        context.fillStyle = "blue";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+      };
+      document.addEventListener("DOMContentLoaded", changeCanvasColor);
+    </script>
+  </body>
+</html>
