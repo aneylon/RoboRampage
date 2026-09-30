@@ -22,7 +22,7 @@ React and JavaScrip experiments, in game form.
 - [ ] Auth
   - [ ] Context
   - [ ] Sign Up
-  - [ ] Sign In
+  - [-] Sign In
   - [ ] Sign Out
   - [ ] Pass token in fetch
 

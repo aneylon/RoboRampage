@@ -13,12 +13,14 @@ import SettingsMenu from "./Components/Menu/SettingsMenu";
 import ThemeContextProvider from "./Context/themeContext";
 import ThemeToggle from "./Components/Buttons/ThemeToggle";
 import ShowOnlineStatus from "./Components/Utilities/ShowOnlineStatus";
+import SignIn from "./Components/Auth/SignIn";
 
 function App() {
   return (
     <ThemeContextProvider>
       <VersionContextProvider>
         <div className="App">
+          <SignIn />
           <h1>Testings?</h1>
           <ThemeToggle />
           <ShowOnlineStatus />
