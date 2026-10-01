@@ -14,6 +14,7 @@ import ThemeContextProvider from "./Context/themeContext";
 import ThemeToggle from "./Components/Buttons/ThemeToggle";
 import ShowOnlineStatus from "./Components/Utilities/ShowOnlineStatus";
 import SignIn from "./Components/Auth/SignIn";
+import SignUp from "./Components/Auth/SignUp";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <VersionContextProvider>
         <div className="App">
           <SignIn />
+          <SignUp />
           <h1>Testings?</h1>
           <ThemeToggle />
           <ShowOnlineStatus />
