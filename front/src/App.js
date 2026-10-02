@@ -15,12 +15,14 @@ import ThemeToggle from "./Components/Buttons/ThemeToggle";
 import ShowOnlineStatus from "./Components/Utilities/ShowOnlineStatus";
 import SignIn from "./Components/Auth/SignIn";
 import SignUp from "./Components/Auth/SignUp";
+import SignOut from "./Components/Auth/SignOut";
 
 function App() {
   return (
     <ThemeContextProvider>
       <VersionContextProvider>
         <div className="App">
+          <SignOut />
           <SignIn />
           <SignUp />
           <h1>Testings?</h1>
