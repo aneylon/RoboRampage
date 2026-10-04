@@ -1,7 +1,6 @@
 import "./App.css";
 import Version from "./Components/Version/Version";
 import Title from "./Components/Title/Title";
-import VersionContextProvider from "./Context/versionContext";
 import VersionModal from "./Components/Modal/VersionModal";
 import ToDo from "./Components/TodoList/ToDo";
 import TestButton from "./Components/Buttons/TestButton";
@@ -10,44 +9,48 @@ import Button from "./Components/Buttons/Button";
 import Menu from "./Components/Menu/Menu";
 import MainMenu from "./Components/Menu/MainMenu";
 import SettingsMenu from "./Components/Menu/SettingsMenu";
-import ThemeContextProvider from "./Context/themeContext";
 import ThemeToggle from "./Components/Buttons/ThemeToggle";
 import ShowOnlineStatus from "./Components/Utilities/ShowOnlineStatus";
 import SignIn from "./Components/Auth/SignIn";
 import SignUp from "./Components/Auth/SignUp";
 import SignOut from "./Components/Auth/SignOut";
+import VersionContextProvider from "./Context/versionContext";
+import ThemeContextProvider from "./Context/themeContext";
+import AuthContextProvider from "./Context/authContext";
 
 function App() {
   return (
-    <ThemeContextProvider>
-      <VersionContextProvider>
-        <div className="App">
-          <SignOut />
-          <SignIn />
-          <SignUp />
-          <h1>Testings?</h1>
-          <ThemeToggle />
-          <ShowOnlineStatus />
-          <MainMenu />
-          <SettingsMenu />
-          <Menu />
-          <Title text={"Robo Rampage"} />
-          <Button
-            text={"Start New Game"}
-            action={() => {
-              console.log("start a new game");
-            }}
-          />
-          <WeirdTestButton />
-          <TestButton />
-          <ToDo />
-          <Version />
-          <VersionModal />
-          {/* TODO : come up with something better for the line below... */}
-          <h6>some text</h6>
-        </div>
-      </VersionContextProvider>
-    </ThemeContextProvider>
+    <AuthContextProvider>
+      <ThemeContextProvider>
+        <VersionContextProvider>
+          <div className="App">
+            <SignOut />
+            <SignIn />
+            <SignUp />
+            <h1>Testings?</h1>
+            <ThemeToggle />
+            <ShowOnlineStatus />
+            <MainMenu />
+            <SettingsMenu />
+            <Menu />
+            <Title text={"Robo Rampage"} />
+            <Button
+              text={"Start New Game"}
+              action={() => {
+                console.log("start a new game");
+              }}
+            />
+            <WeirdTestButton />
+            <TestButton />
+            <ToDo />
+            <Version />
+            <VersionModal />
+            {/* TODO : come up with something better for the line below... */}
+            <h6>some text</h6>
+          </div>
+        </VersionContextProvider>
+      </ThemeContextProvider>
+    </AuthContextProvider>
   );
 }
 

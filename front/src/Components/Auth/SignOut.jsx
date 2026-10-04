@@ -1,10 +1,22 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Context/authContext";
+
 const SignOut = () => {
   // TODO get auth
-  const loggedIn = false;
+  const { user, setUser } = useContext(AuthContext);
+
+  const signOut = () => {
+    setUser(null);
+  };
+
+  const signIn = () => {
+    setUser({ id: 123, name: "steve" });
+  };
+
   return (
     <div>
-      {loggedIn && <span>Sign Out</span>}
-      {!loggedIn && <span>Sign In</span>}
+      {user && <span onClick={signOut}>Sign Out</span>}
+      {!user && <span onClick={signIn}>Sign In</span>}
     </div>
   );
 };
