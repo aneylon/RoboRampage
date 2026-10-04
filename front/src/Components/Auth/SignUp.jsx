@@ -1,6 +1,14 @@
 const SignUp = () => {
+  const emailError = true;
+  const passwordError = true;
+
   const signUp = () => {
     console.log("Sign Up!");
+    // call api
+    // if successful set user
+    // navigate to main page
+
+    // if error display error
   };
   return (
     <div>
@@ -13,6 +21,11 @@ const SignUp = () => {
           placeholder="user@host.com"
         />
       </div>
+      {emailError && (
+        <div>
+          <span className="errorText">Email Error Text here</span>
+        </div>
+      )}
       <div>
         <span>Password : </span>
         <input
@@ -22,6 +35,11 @@ const SignUp = () => {
           placeholder="Strong!23"
         />
       </div>
+      {emailError && (
+        <div>
+          <span className="errorText">Email Error Text here</span>
+        </div>
+      )}
       <button onClick={signUp}>Sign Up</button>
     </div>
   );
