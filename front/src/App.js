@@ -17,6 +17,7 @@ import SignOut from "./Components/Auth/SignOut";
 import VersionContextProvider from "./Context/versionContext";
 import ThemeContextProvider from "./Context/themeContext";
 import AuthContextProvider from "./Context/authContext";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <ThemeContextProvider>
         <VersionContextProvider>
           <div className="App">
+            <Header />
             <SignOut />
             <SignIn />
             <SignUp />
