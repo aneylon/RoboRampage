@@ -8,11 +8,11 @@ const ShowOnlineStatus = () => {
       Is this thing on? :
       {isOnline ? (
         <>
-          <span class="material-symbols-outlined">offline_pin</span>
+          <span className="material-symbols-outlined">offline_pin</span>
         </>
       ) : (
         <>
-          <span class="material-symbols-outlined">offline_pin_off</span>
+          <span className="material-symbols-outlined">offline_pin_off</span>
         </>
       )}
     </div>

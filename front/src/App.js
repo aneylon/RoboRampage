@@ -26,16 +26,13 @@ function App() {
         <VersionContextProvider>
           <div className="App">
             <Header />
-            <SignOut />
             <SignIn />
             <SignUp />
-            <h1>Testings?</h1>
             <ThemeToggle />
             <ShowOnlineStatus />
             <MainMenu />
             <SettingsMenu />
             <Menu />
-            <Title text={"Robo Rampage"} />
             <Button
               text={"Start New Game"}
               action={() => {

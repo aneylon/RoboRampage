@@ -1,9 +1,10 @@
 import SignOut from "../Auth/SignOut";
+import Title from "../Title/Title";
 
 const Header = () => {
   return (
     <div>
-      <h1>Robo Rampage</h1>
+      <Title text={"Robo Rampage"} />
       <SignOut />
     </div>
   );
