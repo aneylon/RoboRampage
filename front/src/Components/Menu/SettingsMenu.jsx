@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SettingsMenu = () => {
+const SettingsMenu = ({ goBack }) => {
   const [soundEffectVolume, setSoundEffectVolume] = useState(5);
   const [sfxOn, setSfxOn] = useState(true);
   const [musicVolume, setMusicVolume] = useState(5);
@@ -61,6 +61,9 @@ const SettingsMenu = () => {
         onChange={changeMusicVolume}
         disabled={!musicOn}
       />
+      <div>
+        <button onClick={goBack}>Back</button>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,8 @@
-const MainMenu = () => {
+const MainMenu = ({ showSettingsMenu, showSavesMenu }) => {
   return (
     <div>
       <div>
-        <button>
+        <button onClick={showSavesMenu}>
           <h3>Resume Game</h3>
         </button>
       </div>
@@ -12,7 +12,7 @@ const MainMenu = () => {
         </button>
       </div>
       <div>
-        <button>
+        <button onClick={showSettingsMenu}>
           <h3>Settings</h3>
         </button>
       </div>

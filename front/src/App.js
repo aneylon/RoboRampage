@@ -18,6 +18,7 @@ import VersionContextProvider from "./Context/versionContext";
 import ThemeContextProvider from "./Context/themeContext";
 import AuthContextProvider from "./Context/authContext";
 import Header from "./Components/Header/Header";
+import Game from "./Components/Game/Game";
 
 function App() {
   return (
@@ -26,12 +27,11 @@ function App() {
         <VersionContextProvider>
           <div className="App">
             <Header />
+            <Game />
             <SignIn />
             <SignUp />
             <ThemeToggle />
             <ShowOnlineStatus />
-            <MainMenu />
-            <SettingsMenu />
             <Menu />
             <Button
               text={"Start New Game"}
