@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GridCell from "./GridCell";
 
 const Grid = ({ height, width }) => {
   const [myGrid, setMyGrid] = useState(null);
@@ -12,9 +13,8 @@ const Grid = ({ height, width }) => {
       }
       tempGrid.push(row);
     }
-    console.log(tempGrid);
     setMyGrid(tempGrid);
-  }, []);
+  }, [height, width]);
 
   return (
     <div>
@@ -22,11 +22,10 @@ const Grid = ({ height, width }) => {
       <div>
         {myGrid &&
           myGrid.map((row) => {
-            console.log("mapping", { row });
             return (
               <div>
                 {row.map((col) => {
-                  return <span className="grid-cell">{col}</span>;
+                  return <GridCell id={col} />;
                 })}
               </div>
             );
