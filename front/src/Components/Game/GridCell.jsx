@@ -1,5 +1,12 @@
 const GridCell = ({ id }) => {
-  return <span className="grid-cell">{id}</span>;
+  const clickIt = () => {
+    console.log("clicked", id);
+  };
+  return (
+    <span className="grid-cell" onClick={clickIt}>
+      {id}
+    </span>
+  );
 };
 
 export default GridCell;
