@@ -1,10 +1,10 @@
-console.log("back it up");
-
 const express = require("express");
+var cors = require("cors");
 
 const app = express();
-
 const port = 12080;
+
+app.use(cors());
 
 const news = require("./routes/news");
 
