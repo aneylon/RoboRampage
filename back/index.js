@@ -1,8 +1,9 @@
 const express = require("express");
 var cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-const port = 12080;
+const port = process.env.PORT;
 
 app.use(cors());
 
@@ -15,5 +16,5 @@ app.get("/", (req, res) => {
 app.use("/news", news);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Robo backend listening on port ${port}`);
 });
