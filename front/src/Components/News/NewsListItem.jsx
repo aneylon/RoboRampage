@@ -1,5 +1,8 @@
 const NewsListItem = ({ newsItem }) => {
-  return <li>{newsItem.title}</li>;
+  const selectItem = () => {
+    console.log("show item", newsItem.id);
+  };
+  return <li onClick={selectItem}>{newsItem.title}</li>;
 };
 
 export default NewsListItem;

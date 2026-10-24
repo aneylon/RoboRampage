@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import useFetch from "../../Hooks/useFetch";
 import NewsListItem from "./NewsListItem";
+import NewsItem from "./NewsItem";
 
 const NewsList = () => {
   const { request, data, loading, error } = useFetch();
   useEffect(() => {
-    request("http://localhost:12080/news");
+    request("http://localhost:4200/news");
   }, []);
   return (
     <div>
@@ -13,11 +14,14 @@ const NewsList = () => {
       {loading && <div>...loading...</div>}
       {error && <div className="errorText">{error}</div>}
       {data && (
-        <ul>
-          {data.map((item) => (
-            <NewsListItem key={item.id} newsItem={item} />
-          ))}
-        </ul>
+        <>
+          <NewsItem newsItem={data[0]} />
+          <ul>
+            {data.map((item) => (
+              <NewsListItem key={item.id} newsItem={item} />
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );

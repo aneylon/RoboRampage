@@ -7,14 +7,16 @@ const newsItems = [
     publishDate: "14/10/2026",
     title: "Add news route.",
     content: "Added a new route for getting news articles.",
-    modDate: "14/10/20206",
+    modDate: "14/10/2026",
+    author: "admin",
   },
   {
     id: 2,
     publishDate: "21/10/2026",
     title: "Add news results.",
     content: "Added more results when getting news items.",
-    modDate: "21/10/20206",
+    modDate: "22/10/2026",
+    author: "admin",
   },
 ];
 
