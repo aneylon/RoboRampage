@@ -9,6 +9,7 @@ import Game from "./Components/Game/Game";
 import Loading from "./Components/Loading/Loading";
 import Grid from "./Components/Game/Grid";
 import NewsList from "./Components/News/NewsList";
+import About from "./Components/About/About";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Header />
             <Loading />
             <Game />
+            <About />
             <Version />
             <VersionModal />
             {/* TODO : come up with something better for the line below... */}
