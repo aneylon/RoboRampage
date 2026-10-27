@@ -10,6 +10,7 @@ import Loading from "./Components/Loading/Loading";
 import Grid from "./Components/Game/Grid";
 import NewsList from "./Components/News/NewsList";
 import About from "./Components/About/About";
+import Spinner from "./Components/Loading/Spinner";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <ThemeContextProvider>
         <VersionContextProvider>
           <div className="App">
+            <Spinner />
             <Header />
             <Loading />
             <Game />
