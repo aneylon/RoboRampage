@@ -6,11 +6,10 @@ import ThemeContextProvider from "./Context/themeContext";
 import AuthContextProvider from "./Context/authContext";
 import Header from "./Components/Header/Header";
 import Game from "./Components/Game/Game";
-import Loading from "./Components/Loading/Loading";
-import Grid from "./Components/Game/Grid";
-import NewsList from "./Components/News/NewsList";
 import About from "./Components/About/About";
-import Spinner from "./Components/Loading/Spinner";
+import { Route, Routes } from "react-router";
+import SignIn from "./Components/Auth/SignIn";
+import SignUp from "./Components/Auth/SignUp";
 
 function App() {
   return (
@@ -18,18 +17,16 @@ function App() {
       <ThemeContextProvider>
         <VersionContextProvider>
           <div className="App">
-            <Spinner />
             <Header />
-            <Loading />
-            <Game />
-            <About />
-            <Version />
-            <VersionModal />
-            {/* TODO : come up with something better for the line below... */}
-            <h6>some text</h6>
-            <NewsList />
-            <Grid height={3} width={3} />
+            <Routes>
+              <Route index element={<Game />} />
+              <Route path="signin" element={<SignIn />} />
+              <Route path="signup" element={<SignUp />} />
+              <Route path="about" element={<About />} />
+            </Routes>
           </div>
+          <Version />
+          <VersionModal />
         </VersionContextProvider>
       </ThemeContextProvider>
     </AuthContextProvider>
