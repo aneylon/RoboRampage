@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 const SignIn = () => {
   const emailError = true;
   const passwordError = true;
@@ -10,37 +12,42 @@ const SignIn = () => {
     // if error display error
   };
   return (
-    <div>
+    <>
       <div>
-        <span>Email : </span>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="user@host.com"
-        />
-      </div>
-      {emailError && (
         <div>
-          <span className="errorText">Email Error Text here</span>
+          <span>Email : </span>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="user@host.com"
+          />
         </div>
-      )}
+        {emailError && (
+          <div>
+            <span className="errorText">Email Error Text here</span>
+          </div>
+        )}
+        <div>
+          <span>Password : </span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Strong!23"
+          />
+        </div>
+        {emailError && (
+          <div>
+            <span className="errorText">Email Error Text here</span>
+          </div>
+        )}
+        <button onClick={signIn}>Sign In</button>
+      </div>
       <div>
-        <span>Password : </span>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Strong!23"
-        />
+        No account? <NavLink to="/signup">Sign Up</NavLink>
       </div>
-      {emailError && (
-        <div>
-          <span className="errorText">Email Error Text here</span>
-        </div>
-      )}
-      <button onClick={signIn}>Sign In</button>
-    </div>
+    </>
   );
 };
 
