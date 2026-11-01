@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { NavLink } from "react-router";
 
 const SignIn = () => {
-  const emailError = true;
-  const passwordError = true;
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+
   const signIn = () => {
     console.log("Sign In!");
+    setPasswordError("invalid password");
+    setEmailError("this email is already in use");
+
     // call api
     // if successful set user
     // navigate to main page
@@ -37,9 +42,9 @@ const SignIn = () => {
             placeholder="Strong!23"
           />
         </div>
-        {emailError && (
+        {passwordError && (
           <div>
-            <span className="errorText">Email Error Text here</span>
+            <span className="errorText">Password Error Text here</span>
           </div>
         )}
         <button onClick={signIn}>Sign In</button>

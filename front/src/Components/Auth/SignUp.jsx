@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 const SignUp = () => {
-  const emailError = true;
-  const passwordError = true;
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
 
   const signUp = () => {
     console.log("Sign Up!");
+    setPasswordError("invalid password");
+    setEmailError("this email is already in use");
     // call api
     // if successful set user
     // navigate to main page
@@ -35,9 +39,9 @@ const SignUp = () => {
           placeholder="Strong!23"
         />
       </div>
-      {emailError && (
+      {passwordError && (
         <div>
-          <span className="errorText">Email Error Text here</span>
+          <span className="errorText">Password Error Text here</span>
         </div>
       )}
       <button onClick={signUp}>Sign Up</button>
