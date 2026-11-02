@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router";
+import { AuthContext } from "../../Context/authContext";
 
 const SignIn = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const { setUser } = useContext(AuthContext);
 
   const signIn = () => {
     console.log("Sign In!");
     setPasswordError("invalid password");
     setEmailError("this email is already in use");
-
+    setUser("Steve");
     // call api
     // if successful set user
     // navigate to main page
