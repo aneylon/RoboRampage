@@ -7,7 +7,8 @@ React and JavaScrip experiments, in game form.
 ## TODO :
 
 - [ ] Clean up Console.logs
-  - [ ] Set lint rule to throw warning for console.logs
+  - [x] Set lint rule to throw warning for console.logs
+
 - [x] Deploy
   - [x] Verify version context working
   - [x] Display deployment status
