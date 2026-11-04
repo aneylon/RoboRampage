@@ -1,16 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const SignUp = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
+  const navigate = useNavigate();
+
   const signUp = () => {
-    console.log("Sign Up!");
     setPasswordError("invalid password");
     setEmailError("this email is already in use");
     // call api
     // if successful set user
     // navigate to main page
+    navigate("../home");
 
     // if error display error
   };

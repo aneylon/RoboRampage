@@ -19,7 +19,7 @@ function App() {
           <div className="App">
             <Header />
             <Routes>
-              <Route index element={<Game />} />
+              <Route index path="home" element={<Game />} />
               <Route path="signin" element={<SignIn />} />
               <Route path="signup" element={<SignUp />} />
               <Route path="about" element={<About />} />
