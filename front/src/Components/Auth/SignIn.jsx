@@ -16,7 +16,7 @@ const SignIn = () => {
     // call api
     // if successful set user
     // navigate to main page
-    navigate("../home");
+    navigate("/");
 
     // if error display error
   };

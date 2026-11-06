@@ -5,9 +5,9 @@ const useFetch = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const request = (url) => {
+  const request = (url, method = "GET") => {
     setLoading(true);
-    fetch(url)
+    fetch(url, { method })
       .then((res) => {
         if (res.ok) {
           res.json().then((data) => {
