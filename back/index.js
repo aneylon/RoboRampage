@@ -11,8 +11,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const auth = require("./routes/auth");
-
 const news = require("./routes/news");
+const game = require("./routes/game");
 
 app.get("/", (req, res) => {
   res.send("Hello Robo!");
@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", auth);
 app.use("/news", news);
+app.use("/game", game);
 
 app.listen(port, () => {
   console.log(`Robo backend listening on port ${port}`);
