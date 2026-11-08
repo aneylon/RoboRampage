@@ -10,8 +10,7 @@ router.post("/signin", (req, res) => {
 
 router.post("/signup", (req, res) => {
   let { email, password } = req.body;
-  console.log({ email, password });
-  res.send(email + " signed up");
+  res.json({ message: "signed up " + email });
 });
 
 module.exports = router;

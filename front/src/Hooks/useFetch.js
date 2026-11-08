@@ -5,9 +5,14 @@ const useFetch = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const request = (url, method = "GET") => {
+  let headers = {
+    "Content-Type": "application/json",
+  };
+
+  const request = (url, method = "GET", body) => {
     setLoading(true);
-    fetch(url, { method })
+    /// TODO : Figure out auth headers.
+    fetch(url, { method, body: JSON.stringify(body), headers })
       .then((res) => {
         if (res.ok) {
           res.json().then((data) => {

@@ -13,7 +13,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const signUp = () => {
-    request("https://localhost:4200/auth/signup", "POST", {
+    request("http://localhost:4200/auth/signup", "POST", {
       email,
       password,
     });

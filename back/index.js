@@ -8,6 +8,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cors());
+
 app.use(bodyParser.json());
 
 const auth = require("./routes/auth");
