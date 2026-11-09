@@ -10,6 +10,7 @@ import About from "./Components/About/About";
 import { Route, Routes } from "react-router";
 import SignIn from "./Components/Auth/SignIn";
 import SignUp from "./Components/Auth/SignUp";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="signin" element={<SignIn />} />
               <Route path="signup" element={<SignUp />} />
               <Route path="about" element={<About />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
           <Version />
