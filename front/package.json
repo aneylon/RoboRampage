@@ -25,7 +25,15 @@
   },
   "eslintConfig": {
     "rules": {
-      "no-console": "warn"
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
     },
     "extends": [
       "react-app",

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import useFetch from "../../Hooks/useFetch";
+import Spinner from "../Loading/Spinner";
 
 const SignUp = () => {
   const [email, setEmail] = useState(null);
@@ -17,17 +18,27 @@ const SignUp = () => {
       email,
       password,
     });
+  };
+
+  useEffect(() => {
+    // TODO : navigate if successful
+    navigate("/");
+  }, [data, navigate]);
+
+  useEffect(() => {
+    // TODO : show correct error if error
+
     setPasswordError("invalid password");
     setEmailError("this email is already in use");
-    // call api
-    // if successful set user
-    // navigate to main page
-    navigate("/");
+  }, [error]);
 
-    // if error display error
-  };
   return (
     <div>
+      {loading && (
+        <div>
+          <Spinner />
+        </div>
+      )}
       <div>
         <span>Email : </span>
         <input

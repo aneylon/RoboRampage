@@ -5,7 +5,6 @@ const BugReport = () => {
   const [email, setEmail] = useState(null);
   const [bugOrFeedback, setBugOrFeedback] = useState(null);
   const enabled = () => {
-    console.log(email, bugOrFeedback);
     return (
       email !== null &&
       email !== "" &&
@@ -14,7 +13,8 @@ const BugReport = () => {
     );
   };
   const submit = () => {
-    console.log("Submitting feedback", email, bugOrFeedback);
+    // TODO : Send bug info to back end.
+    // console.log("Submitting feedback", email, bugOrFeedback);
   };
   return (
     <div>

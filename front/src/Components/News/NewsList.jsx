@@ -9,7 +9,7 @@ const NewsList = () => {
   const { request, data, loading, error } = useFetch();
   useEffect(() => {
     request("http://localhost:4200/news");
-  }, []);
+  }, [request]);
   return (
     <div>
       <h1>News List!</h1>

@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 
 const useOnlineStatus = () => {
   const [isOnline, setIsOnline] = useState(true);
-  console.log(isOnline);
   useEffect(() => {
     function handleOnline() {
-      console.log("online");
       setIsOnline(true);
     }
     function handleOffline() {
-      console.log("offline");
       setIsOnline(false);
     }
 

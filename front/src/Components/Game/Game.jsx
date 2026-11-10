@@ -9,7 +9,6 @@ const Game = () => {
   const [showSaves, setShowSaves] = useState(false);
 
   const goBack = () => {
-    console.log("Go Back");
     setShowMainMenu(true);
     setShowSaves(false);
     setShowSettings(false);
