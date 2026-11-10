@@ -6,7 +6,8 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
-- [ ] Add 404 not found page / route
+- [x] Add Skeleton for loading content
+- [x] Add 404 not found page / route
 
 - [ ] Clean up Console.logs
   - [x] Set lint rule to throw warning for console.logs
