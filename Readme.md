@@ -9,7 +9,7 @@ React and JavaScrip experiments, in game form.
 - [x] Add Skeleton for loading content
 - [x] Add 404 not found page / route
 
-- [ ] Clean up Console.logs
+- [x] Clean up Console.logs
   - [x] Set lint rule to throw warning for console.logs
 
 - [x] Deploy
