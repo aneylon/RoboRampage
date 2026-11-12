@@ -12,8 +12,8 @@ const NewsList = () => {
   // TODO : how to get around this?
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     request("http://localhost:4200/news");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
