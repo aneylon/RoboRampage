@@ -1,4 +1,6 @@
 const NewsItem = ({ newsItem }) => {
+  // TODO : get info if not provided.
+
   const { title, content, publishDate, modDate, author } = newsItem;
   const showUpdated = publishDate !== modDate;
   return (

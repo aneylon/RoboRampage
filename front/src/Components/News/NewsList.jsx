@@ -4,12 +4,17 @@ import NewsListItem from "./NewsListItem";
 import NewsItem from "./NewsItem";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { NavLink } from "react-router";
 
 const NewsList = () => {
   const { request, data, loading, error } = useFetch();
+
+  // TODO : how to get around this?
+
   useEffect(() => {
     request("http://localhost:4200/news");
-  }, [request]);
+  }, []);
+
   return (
     <div>
       <h1>News List!</h1>
@@ -29,7 +34,9 @@ const NewsList = () => {
           <NewsItem newsItem={data[0]} />
           <ul>
             {data.map((item) => (
-              <NewsListItem key={item.id} newsItem={item} />
+              <NavLink key={item.id} to={"/news/" + item.id}>
+                <NewsListItem newsItem={item} />
+              </NavLink>
             ))}
           </ul>
         </>

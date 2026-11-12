@@ -15,6 +15,10 @@ const Header = () => {
       <NavLink to="/" end>
         Home
       </NavLink>
+      <NavLink to="/news" end>
+        News
+      </NavLink>
+      <NavLink to="/about">About</NavLink>
       {!user ? (
         <NavLink to="/signin" end>
           Sign In
