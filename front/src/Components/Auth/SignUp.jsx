@@ -21,8 +21,8 @@ const SignUp = () => {
   };
 
   useEffect(() => {
-    // TODO : navigate if successful
-    navigate("/");
+    // TODO : navigate only on successful
+    if (data?.message === "success") navigate("/");
   }, [data, navigate]);
 
   useEffect(() => {
@@ -73,7 +73,9 @@ const SignUp = () => {
           <span className="errorText">Password Error Text here</span>
         </div>
       )}
-      <button onClick={signUp}>Sign Up</button>
+      <button disabled={!email && !password} onClick={signUp}>
+        Sign Up
+      </button>
     </div>
   );
 };
