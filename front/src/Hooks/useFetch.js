@@ -9,27 +9,34 @@ const useFetch = () => {
     "Content-Type": "application/json",
   };
 
-  const request = (url, method = "GET", body) => {
+  const request = async (url, method = "GET", body) => {
     setLoading(true);
     /// TODO : Figure out auth headers.
-    fetch(url, { method, body: JSON.stringify(body), headers })
-      .then((res) => {
-        if (res.ok) {
-          res.json().then((data) => {
-            setData(data);
-            setLoading(false);
-            setError(null);
-          });
-        } else {
-          throw new Error(res.status);
-        }
-      })
-      .catch((error) => {
-        setData(null);
-        setLoading(false);
-        setError(error.message);
-        console.error("Error :", error);
+    try {
+      const response = await fetch(url, {
+        method,
+        body: JSON.stringify(body),
+        headers,
       });
+
+      if (response.ok) {
+        const result = await response.json();
+        setData(result);
+        setLoading(false);
+        setError(null);
+        return result;
+      } else {
+        console.error("error", response);
+        setError("ERROR!" + response.message);
+        setLoading(false);
+        setData(null);
+        return null;
+      }
+    } catch (error) {
+      console.error("Error : ", error);
+      setError(error.message);
+      setLoading(false);
+    }
   };
   return { request, data, loading, error };
 };
