@@ -28,8 +28,8 @@ React and JavaScrip experiments, in game form.
 - [ ] Auth
   - [ ] Context
   - [ ] Sign Up
-  - [-] Sign In
-  - [ ] Sign Out
+  - [ ] Sign In
+  - [x] Sign Out
   - [ ] Pass token in fetch
 
 - [ ] Skeleton UI for game
@@ -39,7 +39,8 @@ React and JavaScrip experiments, in game form.
 - [ ] useFetch hooks
   - [x] basic
   - [x] promise
-  - [ ] async await
+  - [x] async await
+  - [ ] headers
 
 - [x] version context
 
