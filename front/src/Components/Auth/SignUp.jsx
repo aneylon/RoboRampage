@@ -27,7 +27,7 @@ const SignUp = () => {
 
   useEffect(() => {
     // TODO : show correct error if error
-
+    console.error("ERROR : ", error);
     setPasswordError("invalid password");
     setEmailError("this email is already in use");
   }, [error]);
@@ -52,7 +52,7 @@ const SignUp = () => {
       </div>
       {emailError && (
         <div>
-          <span className="errorText">Email Error Text here</span>
+          <span className="errorText">{emailError}</span>
         </div>
       )}
       <div>
@@ -70,7 +70,7 @@ const SignUp = () => {
       </div>
       {passwordError && (
         <div>
-          <span className="errorText">Password Error Text here</span>
+          <span className="errorText">{passwordError}</span>
         </div>
       )}
       <button disabled={!email && !password} onClick={signUp}>
