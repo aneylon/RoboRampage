@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SettingsMenu = ({ goBack }) => {
-  const [soundEffectVolume, setSoundEffectVolume] = useState(5);
+  const [soundEffectVolume, setSoundEffectVolume] = useState(0);
   const [sfxOn, setSfxOn] = useState(true);
-  const [musicVolume, setMusicVolume] = useState(5);
+  const [musicVolume, setMusicVolume] = useState(0);
+
   const [musicOn, setMusicOn] = useState(true);
 
   const toggleMusic = () => {
@@ -15,12 +16,25 @@ const SettingsMenu = ({ goBack }) => {
   };
 
   const changeSfxVolume = (e) => {
-    setSoundEffectVolume(e.target.value);
+    const val = e.target.value;
+    setSoundEffectVolume(val);
+    sessionStorage.setItem("sfxVol", val);
   };
 
   const changeMusicVolume = (e) => {
-    setMusicVolume(e.target.value);
+    const val = e.target.value;
+    setMusicVolume(val);
+    sessionStorage.setItem("musicVol", val);
   };
+
+  useEffect(() => {
+    // TODO : Get saved vol settings
+    const sfxVol = sessionStorage.getItem("sfxVol");
+    const musicVol = sessionStorage.getItem("musicVol");
+
+    if (sfxVol) setSoundEffectVolume(sfxVol);
+    if (musicVol) setMusicVolume(musicVol);
+  }, []);
 
   return (
     <div>

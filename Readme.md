@@ -35,6 +35,7 @@ React and JavaScrip experiments, in game form.
 - [ ] Skeleton UI for game
   - [x] Reusable Button
   - [ ] Menu Screens
+  - [ ] Save sound settings
 
 - [ ] useFetch hooks
   - [x] basic
