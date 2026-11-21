@@ -36,6 +36,10 @@ React and JavaScrip experiments, in game form.
   - [x] Reusable Button
   - [ ] Menu Screens
   - [ ] Save sound settings
+  - [ ] Game Grid interactions
+    - [ ] Mouse Over
+    - [ ] On Click
+    - [ ] ???
 
 - [ ] useFetch hooks
   - [x] basic
