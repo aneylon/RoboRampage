@@ -1,9 +1,10 @@
-const GridCell = ({ id }) => {
-  const clickIt = () => {
-    console.log("clicked", id);
-  };
+const GridCell = ({ id, click, over }) => {
   return (
-    <span className="grid-cell" onClick={clickIt}>
+    <span
+      className="grid-cell"
+      onClick={() => click(id)}
+      onMouseOver={() => over(id)}
+    >
       {id}
     </span>
   );

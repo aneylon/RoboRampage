@@ -4,6 +4,14 @@ import GridCell from "./GridCell";
 const Grid = ({ height, width }) => {
   const [myGrid, setMyGrid] = useState(null);
 
+  const clickFunction = (id) => {
+    // console.log("clicked", id);
+  };
+
+  const mouseOverFunction = (id) => {
+    // console.log("over", id);
+  };
+
   useEffect(() => {
     let tempGrid = [];
     for (let i = 0; i < height; i++) {
@@ -25,7 +33,13 @@ const Grid = ({ height, width }) => {
             return (
               <div>
                 {row.map((col) => {
-                  return <GridCell id={col} />;
+                  return (
+                    <GridCell
+                      id={col}
+                      click={clickFunction}
+                      over={mouseOverFunction}
+                    />
+                  );
                 })}
               </div>
             );
