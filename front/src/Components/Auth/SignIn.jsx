@@ -22,7 +22,7 @@ const SignIn = () => {
 
   useEffect(() => {
     // TODO : Navigate only on success
-    if (data?.message === "success") navigate("/");
+    if (data?.message.includes("success")) navigate("/");
   }, [data, navigate]);
 
   useEffect(() => {

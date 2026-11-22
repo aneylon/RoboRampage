@@ -22,7 +22,7 @@ const SignUp = () => {
 
   useEffect(() => {
     // TODO : navigate only on successful
-    if (data?.message === "success") navigate("/");
+    if (data?.message.includes("success")) navigate("/");
   }, [data, navigate]);
 
   useEffect(() => {
