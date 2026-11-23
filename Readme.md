@@ -6,7 +6,7 @@ React and JavaScrip experiments, in game form.
 
 ## TODO :
 
-- [ ] Add server logging
+- [x] Add server logging
 
 - [x] Add Skeleton for loading content
 - [x] Add 404 not found page / route
