@@ -1,6 +1,20 @@
 const express = require("express");
 
 const router = express.Router();
+router.get("/sound/:userId", (req, res) => {
+  const { userId } = req.params;
+  res.json({
+    sfxVolume: 5,
+    musicVolume: 5,
+  });
+});
+
+router.post("/sound/:userId", (req, res) => {
+  const { userId } = req.params;
+  res.json({
+    message: "Sound Save Successful",
+  });
+});
 
 router.get("/:userId", (req, res) => {
   const { userId } = req.params;
