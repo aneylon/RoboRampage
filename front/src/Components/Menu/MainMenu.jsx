@@ -2,18 +2,18 @@ const MainMenu = ({ showSettingsMenu, showSavesMenu }) => {
   return (
     <div>
       <div>
-        <button onClick={showSavesMenu}>
-          <h3>Resume Game</h3>
+        <button className="game-button" onClick={showSavesMenu}>
+          <span>Resume Game</span>
         </button>
       </div>
       <div>
-        <button>
-          <h3>New Game</h3>
+        <button className="game-button">
+          <span>New Game</span>
         </button>
       </div>
       <div>
-        <button onClick={showSettingsMenu}>
-          <h3>Settings</h3>
+        <button className="game-button" onClick={showSettingsMenu}>
+          <span>Settings</span>
         </button>
       </div>
     </div>
