@@ -13,6 +13,7 @@ import SignUp from "./Components/Auth/SignUp";
 import NotFound from "./Components/NotFound/NotFound";
 import NewsList from "./Components/News/NewsList";
 import NewsItem from "./Components/News/NewsItem";
+import TicTacToe from "./Components/Game/TicTacToe";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
+          <TicTacToe />
           <Version />
           <VersionModal />
         </VersionContextProvider>
